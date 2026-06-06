@@ -385,34 +385,17 @@ label.margin-toggle:not(.sidenote-number) {
 /* ==========================================================
    Mobile Layout
    ========================================================== */
+   
+@media (max-width: 1024px) {
 
-@media (max-width: 760px) {
-
-    .article,
-    .section,
-    #pageheader,
-    .ruler {
-        width: 92%;
+    .pageitem p,
+    .citation {
+        font-size: 99%;
+        line-height: 150%;
     }
 
-    .table-wrap {
-        width: 100%;
-        margin: 2em 0;
-    }
-
-    .sidenote,
-    .marginnote {
-        display: none;
-    }
-
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
-        display: block;
-        position: relative;
-        float: left;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        left: 1rem;
+    .article-list li {
+        font-size: 99%;
+        line-height: 150%;
     }
 }
