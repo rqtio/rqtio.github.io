@@ -417,17 +417,22 @@ label.margin-toggle:not(.sidenote-number) {
 
     .sidenote,
     .marginnote {
+        display: block;
+        position: relative;
+        float: none;
+        clear: both;
+        width: 95%;
+        margin: 0.5rem 0 1rem 0;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
         display: none;
     }
 
     .margin-toggle:checked + .sidenote,
     .margin-toggle:checked + .marginnote {
         display: block;
-        position: relative;
-        float: left;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        left: 1rem;
     }
 }
