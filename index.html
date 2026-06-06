@@ -1,418 +1,207 @@
-/* ==========================================================
-   Base
-   ========================================================== */
-
-body {
-    margin: 0;
-    background-color: #fefdfb;
-    color: #555;
-    font-family: Georgia, serif;
-    font-size: 93%;
-    font-weight: normal;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #777;
-}
-
-
-/* ==========================================================
-   Navigation
-   ========================================================== */
-
-nav {
-    display: table;
-    width: 75%;
-    margin: 0 auto;
-    table-layout: fixed;
-    font-weight: bold;
-}
-
-#menu {
-    width: 50%;
-    position: relative;
-    left: 20%;
-    background-color: #fefdfb;
-}
-
-#menu a,
-#suite a {
-    color: #555;
-}
-
-ul#topnav {
-    display: flex;
-    flex-direction: row;
-    gap: 42px;
-    margin: 8px 0;
-    position: relative;
-}
-
-ul#topnav li {
-    display: flex;
-}
-
-ul#topnav li a {
-    display: block;
-}
-
-ul#topnav li > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-ul#topnav li > ul > li {
-    display: inline;
-    float: left;
-    padding-right: 5px;
-    font-size: 120%;
-}
-
-
-/* ==========================================================
-   Layout
-   ========================================================== */
-
-#container {
-    width: 100%;
-}
-
-#pageheader,
-.article,
-.section {
-    width: 50%;
-    margin: auto;
-}
-
-.pageheader {
-    line-height: 1.2;
-}
-
-.ruler {
-    width: 50%;
-    margin: auto;
-    padding: 1px 0;
-    border-top: 1px solid #777;
-}
-
-.suite {
-    text-align: right;
-    font-size: 95%;
-    font-weight: bold;
-}
-
-.article {
-    padding: 20px 0;
-    column-count: 1;
-    column-gap: 20px;
-}
-
-.section {
-    padding: 20px 0;
-    border-top: 1px solid #777;
-    column-count: 2;
-    column-gap: 20px;
-}
-
-.pageitem {
-    width: 100%;
-    margin-bottom: 15px;
-    padding-top: 15px;
-    text-align: justify;
-}
-
-
-/* ==========================================================
-   Typography
-   ========================================================== */
-
-.pageitem h1 {
-    margin: 0;
-    color: #555;
-    text-align: left;
-    font-size: 250%;
-    font-weight: normal;
-}
-
-.pageitem h2 {
-    margin-top: 0;
-    color: #444;
-    font-size: 180%;
-    line-height: 1.2;
-}
-
-.pageitem p,
-.citation,
-.article-list {
-    font-size: 100%;
-    line-height: 175%;
-}
-
-.pageitem p {
-    margin: 1em 0;
-    padding: 0;
-    text-indent: 2em;
-}
-
-/* No indent after title/date block */
-.articlefooter + p {
-    text-indent: 0;
-}
-
-.articlefooter {
-    margin: 1em 0;
-    padding: 0;
-    color: #888;
-    text-align: left;
-    text-indent: 0;
-    font-size: 90%;
-    line-height: 175%;
-}
-
-
-/* ==========================================================
-   Quotations
-   ========================================================== */
-
-.citation {
-    width: 80%;
-    margin: 1.5em 10%;
-    padding-left: 10px;
-    text-indent: 0;
-    border-left: 2px solid rgb(200, 200, 200);
-}
-
-
-/* ==========================================================
-   Lists
-   ========================================================== */
-
-.article-list {
-    width: 90%;
-    margin: 1em auto;
-    padding-left: 2em;
-}
-
-.article-list li {
-    margin: 0.5em 0;
-    line-height: 175%;
-}
-
-
-/* ==========================================================
-   Tables
-   ========================================================== */
-
-.table-wrap {
-    width: 80%;
-    margin: 2em 10%;
-    overflow-x: auto;
-}
-
-.academic-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Georgia, serif;
-    font-size: 100%;
-    line-height: 1.4;
-    color: #444;
-}
-
-.academic-table th,
-.academic-table td {
-    padding: 8px 6px;
-    text-align: center;
-    vertical-align: top;
-}
-
-.academic-table thead th {
-    font-weight: normal;
-    border-bottom: 1px solid #777;
-}
-
-.academic-table th small {
-    display: block;
-    margin-top: 2px;
-    color: #777;
-    font-size: 0.8em;
-    font-weight: normal;
-}
-
-.academic-table tbody tr {
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.academic-table tbody tr:last-child {
-    border-bottom: none;
-}
-
-.academic-table tbody tr:hover {
-    background: rgba(0, 0, 0, 0.02);
-}
-
-
-/* ==========================================================
-   Sidenotes
-   ========================================================== */
-
-sup {
-    font-size: 0.83em;
-    line-height: 0;
-    vertical-align: super;
-}
-
-.sidenote,
-.marginnote {
-    position: relative;
-    float: right;
-    clear: right;
-    width: 44%;
-    margin-top: 0.6rem;
-    margin-right: -47%;
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    line-height: 1.3;
-    text-indent: 0;
-    vertical-align: baseline;
-}
-
-label.sidenote-number {
-    display: inline;
-}
-
-label.margin-toggle:not(.sidenote-number) {
-    display: none;
-}
-
-
-/* ==========================================================
-   Mobile Navigation
-   ========================================================== */
-
-#show-menu {
-    display: none;
-}
-
-.open,
-.close {
-    display: none;
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    padding: 0;
-    background-color: inherit;
-    color: #fff;
-    text-align: right;
-    font-size: 1.5em;
-    font-weight: normal;
-}
-
-@media screen and (max-width: 1024px) {
-
-    ul#topnav {
-        display: none;
-    }
-
-    .open {
-        display: block;
-    }
-
-    #show-menu:checked ~ .open {
-        display: none;
-    }
-
-    #show-menu:checked ~ .close {
-        display: block;
-        font-size: 1.6em;
-    }
-
-    #show-menu:checked ~ ul#topnav {
-        display: block;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        margin: 0 0 1% 0;
-        overflow: visible;
-    }
-
-    ul#topnav li {
-        display: block;
-        padding: 1% 0;
-        text-align: center;
-        background-color: #000;
-    }
-
-    ul#topnav li a {
-        display: block;
-        padding-bottom: 5px;
-    }
-
-    ul#topnav li a:hover {
-        text-decoration: underline;
-    }
-
-    ul#topnav li > ul {
-        display: table;
-        float: none;
-        margin: 0 auto;
-        table-layout: fixed;
-    }
-
-    ul#topnav li > ul > li {
-        padding-left: 10px;
-    }
-
-    .pageitem h2 {
-        font-size: 120%;
-    }
-
-    .pageitem p,
-    .citation,
-    .article-list {
-        font-size: 99%;
-        line-height: 150%;
-    }
-}
-
-
-/* ==========================================================
-   Mobile Layout
-   ========================================================== */
-
-@media (max-width: 760px) {
-
-    .article,
-    .section,
-    #pageheader,
-    .ruler {
-        width: 92%;
-    }
-
-    .table-wrap {
-        width: 100%;
-        margin: 2em 0;
-    }
-
-    .sidenote,
-    .marginnote {
-        display: none;
-    }
-
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
-        display: block;
-        position: relative;
-        float: left;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        left: 1rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Le Coût du Capital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="open source html and css template">
+<meta name="author" content="mlp design">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="slidy.css">
+</head>
+<body>
+
+<div class="pageitem">
+	<div class="article">
+<h2>Le Coût du Capital</h2>
+<div class = "articlefooter">Publié le 6 juin 2026.</div>
+
+
+<p>La question du « coût du travail » se présente constamment dans le débat public, tout particulièrement à l’approche de nouvelles élections. Suffisamment de tribunes et d’analyses ont été publiées pour discuter des bénéfices et des limites des charges sociales, il n’y a donc pas d’enjeu à revenir longuement sur ces aspects. Derrière ces débats « pour » ou « contre » se trouvent des impensés qui méritent davantage d’attention, et des leçons à tirer concernant le rôle que jouent les intellectuels, la classe politique et ses commis médiatiques dans la normalisation et la conservation de l’ordre existant.</p>
+
+<p>En général le coût du travail est défini comme l’ensemble des dépenses encourues par un entrepreneur lorsqu’il souhaite employer un salarié<sup>1</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>1</sup> C’est la définition utilisée par l’INSEE.</span>, c’est-à-dire, pour l’essentiel, le salaire et les cotisations sociales. Par exemple, pour un salarié dont la rémunération mensuelle nette se situe au niveau médian (2190 euros), l’employeur doit financer :</p>
+
+<ul class="article-list">
+    <li>la cotisation salariale (22 % du salaire brut) : 1 338 euros ;</li>
+    <li>la cotisation patronale (42 % du salaire brut) : 2 555 euros ;</li>
+</ul>
+
+<p>soit un total de 3893 euros. Les charges sociales représentant en fin de compte la majeure partie du coût du travail, naturellement les chefs d’entreprises ont tout intérêt à voir cette somme diminuer.</p>
+
+<p>	D’une part, ni le patronat, ni ses portes-paroles n’ignorent le rôle crucial des cotisations dans le financement des retraites, des écoles et des hôpitaux, en un mot que le fait que le « coût du travail » est en réalité le coût du fonctionnement de la société et de la satisfaction des besoins de ses membres. Mais d’autre part, parce qu’ils en ont les moyens, les membres de cette strate sociale  sont les plus susceptibles de scolariser leurs enfants dans des établissements privés, d’être soignés dans des cliniques, et d’anticiper leurs retraites avec des dispositifs d’épargne individuels… en bref de s’émanciper des bénéfices sociaux. Autrement dit, ce discours sur le « coût du travail » est situé, il émane d’une classe qui se considère – et c’est en partie vrai –  en extériorité, en fait au-dessus de la société, et pour laquelle cette société, qui n’est qu’un vivier de « ressources humaines », représente un coût.</p>
+
+<p>	Le patronat a cet avantage, sur ses subordonnés, d’être conscient de ses intérêts et d’agir en conséquence. Cette question du « coût du travail » illustre son influence politique sur le reste de la société, et singulièrement sa capacité à imposer son intérêt comme le « bon sens ». De fait, une partie non négligeable des classes moyennes adhère à l’opinion selon laquelle les charges sociales sont un poids dont il serait judicieux de se débarrasser. Rien de plus évident, étant donné le traitement du sujet par les professionnels de l’information. Par exemple RMC, média détenu par Rodolphe Saadé<sup>2</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>2</sup> Rodolphe Saadé est directeur général du groupe CMA CGM, troisième entreprise mondiale de transport maritime.</span>, relaie ainsi une analyse de l’Institut Molinari<sup>3</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>3</sup> « Le salarié moyen français travaille jusqu’au 18 juillet pour financer les services publics et prestations collectives. En 2025, la France reste la championne des prélèvements obligatoires sur le salarié moyen, devant la Belgique et l’Autriche », article publié le 1er juin 2026 par l’Institut Molinari.</span> :</p>
+
+<div class = "citation">
+	« Libéré, délivré ! Les Français travaillent enfin pour eux, et rien que pour eux. On fête aujourd’hui, vendredi 18 juillet, la journée de la libération fiscale. Au 199e jour de l’année, les salariés travaillent pour eux et réellement pour eux. Aujourd’hui, nous avons fini de payer taxes, impôts et cotisations et récupérons précisément tout ce que nous gagnons. »
+</div>
+
+<p>	Autrement dit, le salarié ne travaille pas « pour lui » lorsque la valeur qu’il produit est affectée aux caisses sociales. Pour les journalistes au service de ce narratif, il est crucial de ne pas trop s’appesantir sur la finalité des charges sociales, autrement on risquerait de s’apercevoir que la monnaie issue des prélèvements termine sa course entre les mains des mêmes salariés, par exemple avec les pensions de retraites, ou le remboursement des soins. 
+Au contraire, la réalité sociale doit être présentée de la manière la plus abstraite possible : le salaire net est inférieur au salaire brut, donc seule une partie de la journée de travail est dédiée à travailler pour soi. Dans cette « démonstration » enfantine, diffusée par le patronat à travers ses organes de communication, il y a l’image latente d’un corps social séparé du travailleur, le dépouillant d’une portion du fruit de son labeur sans la moindre contrepartie. Si le concept psychologique de projection a une quelconque pertinence pour l’économie politique, en voilà un beau spécimen. Le monde du salariat est certes le lieu d’une captation de valeur, mais elle fonctionne bien différemment.</p>
+
+<p>	Pour la majorité de la population active<sup>4</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>4</sup> Environ 4/5e de la population active est salariée dans le secteur privé. Pour les travailleurs du secteur public il existe d’autres mécanismes de captation de la valeur qui ne sont pas décrits dans cet article, parce qu’ils nécessitent quelques médiations supplémentaires.</span>, le salariat s’inscrit dans un modèle de production lucratif, dans lequel la répartition des recettes est à la discrétion des propriétaires de l’entreprise, certes dans les limites du code du travail. De fait, on observe une inégalité stricte entre la valeur produite par une entreprise et la rémunération de ses employés, en raison de plusieurs postes de dépenses :</p>
+
+<ul class="article-list">
+    <li>Les dépenses nécessaires à la production simple : masse salariale, maintenance de l’instrument de travail (machines, outils, véhicules, équipements) et des infrastructures ;</li>
+    <li>les dépenses nécessaires à la production élargie : accroissement de la masse salariale, acquisition d’instruments de travail et d’infrastructures supplémentaires ;</li>
+    <li>les prélèvements obligatoires : charges sociales, taxes, impôts ;</li>
+    <li>et la part lucrative : ce que les propriétaires de l’entreprise conservent pour leur propre consommation et/ou leur enrichissement.</li>
+</ul>
+
+<p>Outre le financement de l’entretien et de l’expansion de l’outil de production, les richesses produites par les salariés ont donc plusieurs destinations : leur propre poche (via le salaire), le « commun » (via les prélèvements) et la poche de leur patron (via la part lucrative). </p>
+
+<p>	La part lucrative n’est pas une notion vaporeuse, elle peut être mesurée. Les données qui permettent de l’estimer sont publiques et faciles à trouver pour un certain nombre d’entreprises, en particulier celles du CAC40. Pour ces entreprises, il existe deux mécanismes de rémunération des propriétaires, que l’on nomme « actionnaires » parce qu’ils détiennent des « actions », c’est-à-dire des parts de l’entreprise :</p>
+
+<ul class="article-list">
+    <li>Le versement annuel des dividendes (D) ;</li>
+    <li>et le rachat d’actions (R), qui augmente la valeur des actions existantes en concentrant la capitalisation de l’entreprise dans un plus petit nombre d’actions.</li>
+</ul>
+
+<p>La table ci-dessous compile des données de l’année 2025 pour 16 groupes du CAC40, représentatifs de divers domaines d’activité. En principe, l’analyse qui suit peut s’appliquer à un grand nombre d’entreprises<sup>5</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>5</sup> Il n’est pas nécessaire pour une entreprise d’être cotée en bourse pour verser des dividendes. Par exemple, le groupe Decathlon a versé 1 milliard d’euros de dividendes à la famille Mulliez en 2024. La rémunération des actionnaires via les dividendes n’est donc pas un phénomène circonscrit au « capitalisme financier » d’une poignée de multinationales, et elle n’est d’ailleurs pas le seul mécanisme de rémunération du capital. Avec le financement des petites et moyennes entreprises par le crédit par exemple, c’est le capital des banques et des fonds d’investissment qui capte la valeur produite par le travail.</span>, mais ce petit échantillon suffit pour approximer le rapport de grandeur moyen entre le salaire et la rémunération du capital.  La colonne particulièrement instructive est la dernière, dans laquelle est indiqué le rapport entre la somme des versements de dividendes et rachats d’action, divisée par le nombre de salariés du groupe (N), rapporté au mois ((D + R) / N). Ce nombre représente la quantité mensuelle de valeur qu’un salarié rapporte aux propriétaires de l’entreprise, en moyenne.</p>
+
+<div class="table-wrap">
+  <table class="academic-table">
+    <thead>
+      <tr>
+        <th>Groupe</th>
+        <th>Nombre de salariés</th>
+        <th>Dividendes <br> (millions d'euros)</th>
+        <th>Rachats d’actions <br> (millions d'euros)</th>
+        <th>Valeur par salarié <br> (euros / mois)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Axa</td>
+        <td>118 000</td>
+        <td>4490</td>
+        <td>5000</td>
+        <td>6705</td>
+      </tr>
+      <tr>
+        <td>Sanofi</td>
+        <td>82 900</td>
+        <td>4700</td>
+        <td>302</td>
+        <td>5034</td>
+      </tr>
+      <tr>
+        <td>Crédit Agricole</td>
+        <td>71 652</td>
+        <td>3180</td>
+        <td>374</td>
+        <td>4130</td>
+      </tr>
+      <tr>
+        <td>LVMH</td>
+        <td>175 647</td>
+        <td>6470</td>
+        <td>1000</td>
+        <td>3544</td>
+      </tr>
+      <tr>
+        <td>Engie</td>
+        <td>96 454</td>
+        <td>3600</td>
+        <td>55</td>
+        <td>3161</td>
+      </tr>
+      <tr>
+        <td>Danone</td>
+        <td>90 000</td>
+        <td>1530</td>
+        <td>285</td>
+        <td>1683</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>127 000</td>
+        <td>2300</td>
+        <td>17</td>
+        <td>1520</td>
+      </tr>
+      <tr>
+        <td>Dassault</td>
+        <td>25 000</td>
+        <td>309</td>
+        <td>49</td>
+        <td>1194</td>
+      </tr>
+      <tr>
+        <td>Michelin</td>
+        <td>114 000</td>
+        <td>949</td>
+        <td>500</td>
+        <td>1059</td>
+      </tr>
+      <tr>
+        <td>Safran</td>
+        <td>110 000</td>
+        <td>916</td>
+        <td>410</td>
+        <td>1004</td>
+      </tr>
+      <tr>
+        <td>Vinci</td>
+        <td>293 786</td>
+        <td>2900</td>
+        <td>600</td>
+        <td>993</td>
+      </tr>
+      <tr>
+        <td>Saint Gobain</td>
+        <td>162 000</td>
+        <td>1110</td>
+        <td>402</td>
+        <td>780</td>
+      </tr>
+      <tr>
+        <td>Arcelor Mittal</td>
+        <td>158 000</td>
+        <td>370</td>
+        <td>850</td>
+        <td>643</td>
+      </tr>
+      <tr>
+        <td>Renault</td>
+        <td>120 000</td>
+        <td>594</td>
+        <td>19</td>
+        <td>426</td>
+      </tr>
+      <tr>
+        <td>Carrefour</td>
+        <td>319 565</td>
+        <td>780</td>
+        <td>700</td>
+        <td>386</td>
+      </tr>
+      <tr>
+        <td>Capgemini</td>
+        <td>423 400</td>
+        <td>583</td>
+        <td>675</td>
+        <td>248</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>	L’échantillon étudié révèle une variabilité importante de la part lucrative, qui peut probablement être attribuée à des différences d’arbitrage entre le réinvestissement productif et la rémunération des actionnaires, ainsi qu’à des variations dans la composition du capital, et sans doute à d’autres phénomènes qu’il reste à comprendre. Néanmoins, si on fait abstraction de cette variabilité, on constate que la moyenne pondérée de la part lucrative mensuelle est de 1542 euros par mois pour les 2,5 millions d’employés considérés dans cette table.</p>
+
+<p>	Un salarié moyen du CAC40, rémunéré au SMIC (1960 euros en « super brut<sup>6</sup><label for="" class="margin-toggle sidenote-number"></label><id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote"><sup>6</sup> Le salaire « super brut » est la somme du salaire net, des cotisation salariales et des cotisations patronales.</span> »), travaille donc pendant 99 jours ouvrés pour enrichir les actionnaires de son groupe. La valeur produite pendant cette séquence ne sert ni à reconstituer la valeur correspondant aux matières premières, ni à constituer un fonds servant à l’entretien de l’outil de production, ni même à financer la croissance de l’entreprise. Annuellement versée aux investisseurs, cette valeur quitte l’entreprise et ne retourne à la société que très marginalement grâce à l’impôt. Pour autant, on serait bien en peine de trouver un journaliste de RMC prêt à commettre un article sur le « coût des actionnaires » ou sur la « journée de libération salariale » ainsi estimée en date du 10 juin.
+Ce qui est coûteux pour le salarié n’est donc pas le travail, mais plutôt la rémunération du capital qui l’emploie pendant 35 heures, pour finalement passer 15 heures à produire un surplus de marchandises ou de services dont l’unique objet est d’enrichir l’heureux propriétaire d’une action. Un surplus de marchandises qui peut d’ailleurs avoir une utilité sociale limitée voire négative, ce qui pose la question plus large du choix de ce qui doit être produit, de la sur-production et de son coût pour la société. </p>
+
+<p>	Les choses étant bien faites, le montant des dividendes n’apparaît pas dans la section de la fiche de paie qui énumère les sommes déduites du salaire, contrairement aux cotisations qui y sont décomptées au centime près, et que les journaux aiment tant décortiquer. Plus qu’une diversion, le narratif sur le « coût du travail » est une inversion des rapports réels. Même si l’intégralité de la valeur affectée aux charges sociales était transférée vers le salaire, le pouvoir d’achat des salariés resterait constant, puisque tous les biens et services qui ne sont plus financés collectivement devraient désormais être achetés individuellement. Pire, on peut raisonnablement douter que le salaire n’augmente si les cotisations venaient à diminuer. Le salaire étant maintenu constant, une diminution des cotisations correspond à une augmentation de la part lucrative, et c’est sans aucun doute cette équation que la patronat a en vue. Autrement dit, l’enjeu réel de la manœuvre consiste à augmenter la lucrativité du capital en érodant la portion qui était auparavant affectée à la société via la cotisation. Dans cette perspective renversée, non seulement le financement des biens communs serait un poids pour les membres de la société, mais l’intérêt suprême des salariés serait de troquer les prélèvements sociaux – et donc les bénéfices qui en découlent – contre une augmentation relative des recettes destinées aux actionnaires.</p>
+
+<p>	Loin d’être dans l’intérêt « des français » dans leur ensemble, la diminution du coût du travail est une mesure au profit de cette minorité de propriétaires qui consomment sans travailler, et au détriment de la majorité des employés qui travaillent plus qu’ils ne consomment. Ici, comme au sujet d’autres rapports économiques, le rôle des intellectuels au service du patronat est de dissimuler l’antagonisme qui oppose les salariés aux chefs d’entreprise, fonds d’investissement et autres membres de cette strate sociale qui s’enrichit en captant la valeur produite par la société. En supposant tous les français unis dans un même intérêt, celui de l’« économie », en invisibilisant le coût du capital et en imposant le point de vue de ses bénéficiaires comme une perspective neutre et pragmatique, les médias jouent un rôle crucial dans l’obscurcissement des rapports réels et le maintien du statu quo.</p>
+
+<p>	Pour ces raisons, le rôle d’une formation politique « de gauche », concernée par la « justice sociale » ou solidaire du « peuple » est de faire la lumière sur ce rapport antagonique, de décrire en termes exacts et compréhensibles son mécanisme, et de produire une pensée radicale orientée vers son abolition. À l’inverse, les personnalités politiques qui traitent la question du « coût du travail » sans esprit critique, et sans y opposer des revendications claires concernant la rémunération du capital révèlent leur positionnement – conscient ou non –  dans ce conflit social incontournable qui oppose le salariat au patronat.</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>
