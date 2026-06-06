@@ -200,8 +200,26 @@ Ce qui est coûteux pour le salarié n’est donc pas le travail, mais plutôt l
 
 <p>	Pour ces raisons, le rôle d’une formation politique « de gauche », concernée par la « justice sociale » ou solidaire du « peuple » est de faire la lumière sur ce rapport antagonique, de décrire en termes exacts et compréhensibles son mécanisme, et de produire une pensée radicale orientée vers son abolition. À l’inverse, les personnalités politiques qui traitent la question du « coût du travail » sans esprit critique, et sans y opposer des revendications claires concernant la rémunération du capital révèlent leur positionnement – conscient ou non –  dans ce conflit social incontournable qui oppose le salariat au patronat.</p>
 
+<div id="footnotes-mobile"></div>
+
 </div>
 </div>
 </div>
+
+<script>
+function collectSidenotes() {
+    const isMobile = window.innerWidth <= 760;
+    const container = document.getElementById('footnotes-mobile');
+
+    if (isMobile) {
+        document.querySelectorAll('.sidenote, .marginnote').forEach(note => {
+            container.appendChild(note);
+        });
+    }
+}
+
+window.addEventListener('DOMContentLoaded', collectSidenotes);
+</script>
+
 </body>
 </html>
