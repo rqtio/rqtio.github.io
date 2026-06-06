@@ -219,7 +219,7 @@ ul#topnav li > ul > li {
     width: 100%;
     border-collapse: collapse;
     font-family: Georgia, serif;
-    font-size: 100%;
+    font-size: 95%;
     line-height: 1.4;
     color: #444;
 }
@@ -392,47 +392,24 @@ label.margin-toggle:not(.sidenote-number) {
 
 @media (max-width: 760px) {
 
-    .article,
-    .section,
-    #pageheader,
-    .ruler {
-        width: 92%;
-    }
-
-    .table-wrap {
-        width: 100%;
-        margin: 2em 0;
-    }
-
-    .pageitem p,
-    .citation,
-    .article-list {
-        font-size: 99%;
-        line-height: 150%;
-    }
-
-    .article-list li {
-        line-height: 150%;
-    }
-
+    /* sidenotes are moved by JS, nothing to show in-flow */
     .sidenote,
     .marginnote {
-        display: block;
-        position: relative;
-        float: none;
-        clear: both;
-        width: 95%;
-        margin: 0.5rem 0 1rem 0;
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-
-    label.margin-toggle:not(.sidenote-number) {
         display: none;
     }
 
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
+    #footnotes-mobile {
+        width: 92%;
+        margin: 2em auto;
+        padding-top: 1em;
+        border-top: 1px solid #777;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    #footnotes-mobile .sidenote,
+    #footnotes-mobile .marginnote {
         display: block;
+        margin-bottom: 0.75em;
     }
 }
